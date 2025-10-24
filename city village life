@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>City vs Village Life</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(135deg, #d4fc79, #96e6a1);
+      color: #333;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.75);
+      color: white;
+      text-align: center;
+      padding: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #ffeb3b;
+      text-shadow: 2px 2px 6px rgba(255,255,255,0.5);
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 20px;
+      font-weight: 500;
+      position: relative;
+      transition: color 0.3s ease;
+    }
+
+    nav a::after {
+      content: "";
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      left: 0;
+      bottom: -4px;
+      background: #ffeb3b;
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    nav a:hover {
+      color: #ffeb3b;
+    }
+
+    section {
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    section h2 {
+      font-size: 2.4rem;
+      margin-bottom: 30px;
+      color: #2e7d32;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card h3 {
+      margin: 15px 0 10px;
+      color: #2e7d32;
+      font-size: 1.5rem;
+    }
+
+    .card p {
+      padding: 0 20px 25px;
+      color: #666;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      background: linear-gradient(45deg, #66bb6a, #43a047);
+      color: #fff;
+      padding: 10px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      margin-bottom: 15px;
+      transition: background 0.4s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(45deg, #81c784, #1b5e20);
+    }
+
+    footer {
+      background: #1b5e20;
+      color: #fff;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+      font-size: 1rem;
+      letter-spacing: 1px;
+    }
+
+    footer p span {
+      color: #ffeb3b;
+      font-weight: bold;
+    }
+
+    @media(max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>City vs Village Life</h1>
+    <nav>
+      <a href="#city">City Life</a>
+      <a href="#village">Village Life</a>
+    </nav>
+  </header>
+
+  <section id="city">
+    <h2>City Life</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1473187983305-f615310e7daa?w=800" alt="City Buildings">
+        <h3>Modern Lifestyle</h3>
+        <p>City life is filled with opportunities, luxury, and speed. Every corner reflects progress and development.</p>
+        <a href="#" class="btn">Explore</a>
+      </div>
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800" alt="City Night">
+        <h3>Vibrant Nights</h3>
+        <p>The city never sleeps — glowing streets, bright cafes, and modern culture define its energy.</p>
+        <a href="#" class="btn">Discover</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="village">
+    <h2>Village Life</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="../New folder (2)/download.jpg" alt="Village Nature">
+        <h3>Peaceful Atmosphere</h3>
+        <p>Village life offers calmness, nature, and purity — a perfect place for peace and relaxation.</p>
+        <a href="#" class="btn">Explore</a>
+      </div>
+      <div class="card">
+        <img src="../New folder (2)/download (3).jpg" alt="Village Life">
+        <h3>Simple Living</h3>
+        <p>People in villages live in harmony with nature — simple, pure, and full of community spirit.</p>
+        <a href="#" class="btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 <span>City vs Village Life</span> | Designed with 💚 by Zoni</p>
+  </footer>
+</body>
+</html>
